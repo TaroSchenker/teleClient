@@ -1,15 +1,23 @@
 
 const addTelegram = document.forms['telegram-form']
-const getPostsButton = document.querySelector('.getPosts')
+// const getPostsButton = document.querySelector('.getPosts')
 
+const postForm = document.querySelector('#postForm')
+console.log(postForm)
 
-getPostsButton.addEventListener('click', async () => {
-    console.log('hi')
+// getPostsButton.addEventListener('click', async () => {
+//     console.log('hi')
+//     const data =  await getPosts()
+// })
+
+postForm.addEventListener('click', async () => {
     const data =  await getPosts()
+    document.getElementById("telegram-form").reset();
+    //    clearPosts('#tweet-container') 
 })
 
-
 async function getPosts() {
+ 
     const response = await fetch('http://localhost:3000/posts')
         const data = await response.json()
         console.log(data)
@@ -45,16 +53,10 @@ addTelegram.addEventListener('submit', (e) => {
     const story = addTelegram.querySelector('#story').value
     console.log(title, sendersName, story)
 
-    // const today = new Date();
-    // const d = new Date()
-    // const hours = String(d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds());
-    // const dd = String(today.getDate()).padStart(2, '0');
-    // const mm = String(today.getMonth() + 1).padStart(2, '0');
-    // const yyyy = today.getFullYear();
-    // const newToday = hours + " " + yyyy + '-' + mm + '-' + dd;
-const newToday = createDateString()
-console.log('new today', newToday)
-makePost(newToday, title, sendersName, story)
+    const newToday = createDateString()
+    console.log('new today', newToday)
+    makePost(newToday, title, sendersName, story)
+})
 
 function createDateString(){
     const today = new Date();
@@ -68,33 +70,10 @@ function createDateString(){
 }
 
 
-    // fetch("https://496d0a30-44f8-4822-bcef-5aa90b1bd2ba.mock.pstmn.io", {
-    //     method: 'POST',
-    //     headers: {
-    //         'Accept': 'application/json',
-    //         'Content-Type': 'application/json'
-    //     },
-    //     body: JSON.stringify({
-    //         // "id": 13,
-    //         "title": `"${newToday}"`,
-    //         "name": `${sendersName}`,
-    //         "story": `${story}`,
-    //         "date": `${newToday}`,
-    //     }),
-    // }).then(res => res.json())
-    //     .then(res => {
-    //         console.log(res)
-    //         renderPost(res)
-    //     })
-        
-})
-
-
-
 
 const renderPost =  (posts) => {
-
-    posts.forEach(post => {
+  
+    posts.reverse().forEach(post => {
         const tweetContainer = document.getElementById('tweet-container')
         const tweet = document.createElement('div')
         const titleDate = document.createElement('div')
