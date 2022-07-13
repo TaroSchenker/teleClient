@@ -1,32 +1,74 @@
-/* .border{
-     border: 5px solid red; 
-} 
-*/
+html {
+    height: 100vh;
+    font-family: 'Balsamiq Sans', sans-serif;
+  }
 
-/* .tweet{
-     border: 5px solid red; 
-} */
+body {
+    height: 100vh;
+    font-family: 'Balsamiq Sans', sans-serif;
+    background: #666666;
 
+  }
+  
+  .card {
+    border: 6px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+  }
+/* 
+  button:hover {
+    border: 5px solid rgba(255, 255, 255, 1);
+    color: #ffffff;
+    transition: all 0.4s;
+  } */
+#contain-border{
+    background-color: rgb(237, 234, 234);
+    border-radius: 5%;
+}
+.header{
+    font-family: 'Balsamiq Sans', sans-serif;
+    font-weight: 600;
+    font-size: 37rem;
+    background: #666666; 
+    border: 6px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+  .card .row .form-group {
+    line-height: 40px;
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 0 0 30px;
+    display: block;
+    pointer-events: none;
+  }
 .container{
     margin: 0 500px;
+    background: #666666;
+    font-family: 'Balsamiq Sans', sans-serif;
+    padding-top: 10px;
     /* border: 3px solid red; */
 }
 
 .form-container{
     border: 2px solid black;
     border-radius: 20px;
-    margin: 5px;
-    padding: 20px;
+    margin: 4px;
+    padding: 10px;
+    background: #666666;
+    font-family: 'Balsamiq Sans', sans-serif;
+    color: #ffffff;
 
 }
 
 /* .tweet-individual {
      border: 3px solid green 
 } */
-
-label{
-    margin-right:auto;
-    padding-right: 10px
+.card-header{
+    background: #666666;
+    font-family: 'Balsamiq Sans', sans-serif;
 }
 
 textarea{
@@ -34,9 +76,9 @@ textarea{
     background-color: transparent;
     border: 0px solid;
     color: rgb(0, 0, 0);
+    
 }
 input{
-
     background-color: transparent;
     border: 0px solid;
     color: rgb(0, 0, 0);
@@ -57,3 +99,31 @@ span{
         width: 40%;
  }
 }
+
+.button {
+
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 3px;
+    color: #fff;
+    background: #000;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 12px 20px;
+    text-align:center;
+    transition-duration: .15s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    border: 6px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 15px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+
+    
+}
+ .button:hover{
+        color: #000;
+        background: rgb(255, 218, 87);
+    }
