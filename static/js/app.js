@@ -1,7 +1,9 @@
+document.addEventListener("DOMContentLoaded", () => {
+    getPosts()
+})
 
 const addTelegram = document.forms['telegram-form']
 // const getPostsButton = document.querySelector('.getPosts')
-
 const postForm = document.querySelector('#postForm')
 console.log(postForm)
 
@@ -13,6 +15,8 @@ console.log(postForm)
 postForm.addEventListener('click', async () => {
     const data =  await getPosts()
     document.getElementById("telegram-form").reset();
+    location.reload();
+return false;
     //    clearPosts('#tweet-container') 
 })
 
@@ -65,7 +69,8 @@ function createDateString(){
     const dd = String(today.getDate()).padStart(2, '0');
     const mm = String(today.getMonth() + 1).padStart(2, '0');
     const yyyy = today.getFullYear();
-    const newToday = hours + " " + yyyy + '-' + mm + '-' + dd;
+ 
+    const newToday = /*hours + " " */ yyyy + '-' + mm + '-' + dd;
     return newToday
 }
 
@@ -75,17 +80,19 @@ const renderPost =  (posts) => {
   
     posts.reverse().forEach(post => {
         const tweetContainer = document.getElementById('tweet-container')
-        const tweet = document.createElement('div')
-        const titleDate = document.createElement('div')
+        const tweet = document.createElement('div') //card
+        const titleDate = document.createElement('div') // card header
         const title = document.createElement('h5')
-        const date = document.createElement('p')
-        const name = document.createElement('h6')
-        const story = document.createElement('h6')
+        const date = document.createElement('p') 
+        const name = document.createElement('h6')// card title
+        const story = document.createElement('h6')//card-text
 
         //add classes
-        tweet.classList.add("tweet-individual", "mt-3", "alert", "alert-success")
-        titleDate.classList.add("d-flex")
-        date.classList.add("px-3")
+        tweet.classList.add("tweet-individual", "card", "my-3")
+        titleDate.classList.add("d-flex","card-header", "pt-4")
+        date.classList.add("mx-5")
+        name.classList.add("blockquote-footer", "mt-1")
+        story.classList.add("card-text", "my-3")
         
     
         title.innerText = post.title
@@ -94,8 +101,10 @@ const renderPost =  (posts) => {
         story.innerText = post.story
     
         titleDate.append(title, date)
-        tweet.append(titleDate, name, story)
+        tweet.append(titleDate, story, name)
         tweetContainer.appendChild(tweet)
+   
+      
     
     })
     
