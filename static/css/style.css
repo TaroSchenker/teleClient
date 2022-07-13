@@ -1,27 +1,29 @@
-.border{
-    border: 5px solid red;
-}
+/* .border{
+     border: 5px solid red; 
+} 
+*/
 
-.tweet{
-    border: 5px solid red;
-}
+/* .tweet{
+     border: 5px solid red; 
+} */
 
 .container{
     margin: 0 500px;
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 
 .form-container{
-
+    border: 2px solid black;
     border-radius: 20px;
     margin: 5px;
-    padding: 2px;
+    padding: 20px;
+
 }
 
 
-.tweet-individual {
-    border: 3px solid green
-}
+/* .tweet-individual {
+     border: 3px solid green 
+} */
 
 label{
     margin-right:auto;
