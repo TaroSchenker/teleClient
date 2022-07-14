@@ -15,12 +15,7 @@ body {
     box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.3);
     border-radius: 50px;
   }
-/* 
-  button:hover {
-    border: 5px solid rgba(255, 255, 255, 1);
-    color: #ffffff;
-    transition: all 0.4s;
-  } */
+
 #contain-border{
     background-color: rgb(237, 234, 234);
     border-radius: 5%;

@@ -3,14 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 const addTelegram = document.forms['telegram-form']
-// const getPostsButton = document.querySelector('.getPosts')
 const postForm = document.querySelector('#postForm')
 console.log(postForm)
 
-// getPostsButton.addEventListener('click', async () => {
-//     console.log('hi')
-//     const data =  await getPosts()
-// })
 
 postForm.addEventListener('click', async () => {
     const data =  await getPosts()
