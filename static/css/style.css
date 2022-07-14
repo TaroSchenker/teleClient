@@ -28,12 +28,11 @@ body {
 .header{
     font-family: 'Balsamiq Sans', sans-serif;
     font-weight: 600;
-    font-size: 37rem;
-    background: #666666; 
     border: 6px solid rgba(0, 0, 0, 0.3);
     box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.3);
     border-radius: 50px;
-    color: #ffffff;
+    padding: 20px;
+    color: #ffffff !important;
     margin-bottom: 40px;
 }
   .card .row .form-group {
