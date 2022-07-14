@@ -31,7 +31,7 @@ function makePost(newToday, title, sendersName, story){
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            "title": `"${title}"`,
+            "title": `${title}`,
             "name": `${sendersName}`,
             "story": `${story}`,
             "date": `${newToday}`,
@@ -84,7 +84,7 @@ const renderPost =  (posts) => {
 
         //add classes
         tweet.classList.add("tweet-individual", "card", "my-3")
-        titleDate.classList.add("d-flex","card-header", "pt-4")
+        titleDate.classList.add("d-flex","card-header", "pt-2")
         date.classList.add("mx-5")
         name.classList.add("blockquote-footer", "mt-1")
         story.classList.add("card-text", "my-3")

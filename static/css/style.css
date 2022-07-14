@@ -127,3 +127,7 @@ span{
         color: #000;
         background: rgb(255, 218, 87);
     }
+
+    .tweet-individual{
+        width: 900px !important;
+    }
