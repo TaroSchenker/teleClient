@@ -10,6 +10,11 @@ body {
 
   }
   
+.container{
+
+ max-width: 700px !important;
+  
+  }
   .card {
     border: 6px solid rgba(0, 0, 0, 0.3);
     box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.3);
@@ -43,6 +48,7 @@ body {
     background: #666666;
     font-family: 'Balsamiq Sans', sans-serif;
     padding-top: 10px;
+    margin-left: auto;
     /* border: 3px solid red; */
 }
 
